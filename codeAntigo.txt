@@ -1,0 +1,69 @@
+export default function App() {
+  const [value, onChangeText] = React.useState('');
+  return (
+    <View style={styles.container}>
+       <Image source={{ uri: 'https://github.com/Douglasalvesbaptista.png' }} style={styles.logo} />
+       <Text style={styles.textCont}>Login</Text>
+       <TextInput
+              style={styles.inputTxt}
+              onChangeText={text => onChangeText(text)}
+              value={value}
+            />
+       <Text style={styles.textCont}>Senha</Text>     
+       <TextInput
+              style={styles.inputTxt}
+              onChangeText={text => onChangeText(text)}
+              value={value}
+            />           
+        <TouchableOpacity
+          onPress={() => alert('te amo seu baitolao')}
+          style={styles.butao}>
+          <Text style={styles.butaoText}>ENTRAR</Text>
+         
+        </TouchableOpacity>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#191919',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textCont: {
+    fontSize:20,
+    color: '#fff'
+    
+  },
+  butaoText: { 
+    fontSize: 20,
+    color: '#fff',
+    padding:5,
+   
+
+  },
+  butao: { 
+    backgroundColor: '#ccc',
+    marginTop:20,
+    borderRadius: 7
+
+ },
+ logo: {
+   width:150,
+   height:150,
+   borderRadius:75,
+   marginBottom:20
+   },
+ ninputTxt: {
+   height: 40, 
+    borderColor: 'gray', 
+    borderWidth: 1,
+    color: '#191919',
+    borderRadius: 7,
+    backgroundColor: '#fff',
+   
+   }
+});
